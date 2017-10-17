@@ -3,11 +3,21 @@
 # Part 1
 
 def sum arr
-  # YOUR CODE HERE
+  count = 0
+  arr.each do |i|
+    puts i
+  count += i
+end
+return count
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
+  new_arr = [0]
+  new_arr[0] = arr.max || 0
+  arr -=[new_arr[0]]
+  new_arr[1] = arr.max || 0
+  sum = new_arr[0]+new_arr[1]
+return sum
 end
 
 def sum_to_n? arr, n
@@ -17,15 +27,24 @@ end
 # Part 2
 
 def hello(name)
-  # YOUR CODE HERE
+  return "Hello #{name}"
 end
 
 def starts_with_consonant? s
-  # YOUR CODE HERE
+  if s =~/^([a, e, i, o, u]).*/i
+    return true
+  else
+    return false
+  end 
 end
 
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
+  puts s.to_i()
+  if s.to_i()!= 0 and s.to_i()%4 == 0
+    return true
+  else
+    return false
+  end
 end
 
 # Part 3
