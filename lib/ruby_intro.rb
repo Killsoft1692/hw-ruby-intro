@@ -50,5 +50,23 @@ end
 # Part 3
 
 class BookInStock
-# YOUR CODE HERE
+  def initialize(isbn, price)
+    raise ArgumentError,("give me an valid isbn") if isbn == '' 
+    @isbn = isbn
+    @price = price
+  end
+
+  def get_isbn
+    puts @isbn
+  end
+
+  def set_isbn=(isbn)
+    if isbn != ''
+        @isbn = isbn
+      end
+    end
+  
+  def price_as_string
+    puts "$%.2f"%@price.to_f
+    end
 end
